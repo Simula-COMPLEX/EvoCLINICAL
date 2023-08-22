@@ -156,10 +156,10 @@ def load_test_selection_strategy(ts_size=100, RUN=1, ID=1000, transfer_version='
 def test_suite_execution(test_suite):
     print('Test suites execution...')
     url = "http://localhost:8090/login"
-    payload = 'username=guri-admin&password=guriadmin'
+    payload = 'username=username&password=password'
 
     s = requests.Session()
-    s.auth = ("guri-admin", "guriadmin")
+    s.auth = ("username", "password")
     s.post(url, data=payload)
 
     response_list = []
